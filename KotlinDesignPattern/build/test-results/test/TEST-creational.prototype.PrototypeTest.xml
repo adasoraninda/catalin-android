@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="creational.prototype.PrototypeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-18T15:34:55" hostname="ada-X540LJ" time="0.065">
+  <properties/>
+  <testcase name="testPrototype()" classname="creational.prototype.PrototypeTest" time="0.065"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
