@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/list_fragment">
+
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="com.codetron.dogs.ui.list.ListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/nav_list_to_detail"
+            app:destination="@id/detail_fragment" />
+
+        <action
+            android:id="@+id/nav_list_to_settings"
+            app:destination="@id/settings_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_fragment"
+        android:name="com.codetron.dogs.ui.detail.DetailFragment"
+        android:label="{name}"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="dogId"
+            app:argType="integer" />
+
+        <argument
+            android:name="name"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:label="@string/settings"
+        android:id="@+id/settings_fragment"
+        android:name="com.codetron.dogs.ui.settings.SettingsFragment" />
+
+</navigation>

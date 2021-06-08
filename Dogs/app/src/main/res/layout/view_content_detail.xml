@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dog"
+            type="com.codetron.dogs.data.Dog" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:paletteColor="@{dog.imageUrl}">
+
+        <ImageView
+            android:id="@+id/img_dog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:imgUrl="@{dog.imageUrl}"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@color/teal_200" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@{dog.name}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintEnd_toEndOf="@id/gdl_end"
+            app:layout_constraintStart_toStartOf="@id/gdl_start"
+            app:layout_constraintTop_toBottomOf="@id/img_dog"
+            tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/txt_life_span"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{dog.lifeSpan}"
+            app:layout_constraintEnd_toEndOf="@id/gdl_end"
+            app:layout_constraintStart_toStartOf="@id/gdl_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_name"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/txt_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{dog.breedGroup}"
+            app:layout_constraintEnd_toEndOf="@id/gdl_end"
+            app:layout_constraintStart_toStartOf="@id/gdl_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_life_span"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/txt_bred_for"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{dog.bredFor}"
+            app:layout_constraintEnd_toEndOf="@id/gdl_end"
+            app:layout_constraintStart_toStartOf="@id/gdl_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_group"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/txt_temperament"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{dog.temperament}"
+            app:layout_constraintEnd_toEndOf="@id/gdl_end"
+            app:layout_constraintStart_toStartOf="@id/gdl_start"
+            app:layout_constraintTop_toBottomOf="@id/txt_bred_for"
+            tools:text="@string/app_name" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdl_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdl_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

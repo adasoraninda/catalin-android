@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false">
+
+    <PreferenceCategory
+        android:icon="@drawable/ic_display"
+        android:title="Display">
+
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_mode"
+            android:key="@string/key_mode"
+            android:summaryOff="Light"
+            android:summaryOn="Dark"
+            android:title="Theme mode" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
