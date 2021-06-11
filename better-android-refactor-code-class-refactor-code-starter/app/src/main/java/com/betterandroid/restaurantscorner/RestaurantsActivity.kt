@@ -67,7 +67,7 @@ class RestaurantsActivity : AppCompatActivity() {
                     displayName = "Restaurant ${restaurant.name}",
                     displayDistance = "at ${restaurant.distance} KM distance",
                     imageUrl = restaurant.imageUrl,
-                    type = restaurant.type
+                    type = RestaurantType.getType(restaurant.type)
                 )
             )
         }
